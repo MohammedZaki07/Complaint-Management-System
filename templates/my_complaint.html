@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Complaint Status</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='my_complaint.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Complaint Status for {{ email }}</h2>
+
+        {% if complaints %}
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Complaint</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+                {% for c in complaints %}
+                <tr>
+                    <td>{{ c['id'] }}</td>
+                    <td>{{ c['complaint'] }}</td>
+                    <td>{{ c['date'] }}</td>
+                    <td>{{ c['status'] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No complaints found for this email.</p>
+        {% endif %}
+
+        <a href="{{ url_for('user') }}">Back to Home</a>
+    </div>
+</body>
+</html>

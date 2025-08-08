@@ -1,0 +1,62 @@
+<!DOCTYPE html> <!-- Declares the document type -->
+<html lang="en"> <!-- Specifies the language of the page -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Sets character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes page responsive on all devices -->
+    <title>Complain</title> <!-- Title of the tab -->
+    
+    <!-- Link to external CSS file stored in the Flask 'static' folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <!-- Heading of the page -->
+    <h1>Welcome to Complain form</h1>
+
+    <!-- Paragraph description -->
+    <p>We are here to help you with your complaints. Please fill out the form below.</p>
+
+    <!-- Sub-heading -->
+    <h3>Complain Form</h3>
+
+    <!-- Form starts here -->
+    <!-- action="/complain" -> form data will be submitted to this route -->
+    <!-- method="POST" -> data is sent securely in the request body -->
+    <form action="/complain" method="POST">
+        
+        <!-- Name input -->
+        <div>
+            <label>Name</label> <!-- Text label for the input -->
+            <input type="text" name="name" required> <!-- Text field with 'name' as key -->
+        </div>
+
+        <!-- Email input -->
+        <div>
+            <label>Email</label>
+            <input type="email" name="email" required>
+        </div>
+
+        <!-- Complaint title input -->
+        <div>
+            <label>Complain</label>
+            <input type="text" name="complain" required>
+        </div>
+
+        <!-- Description of the complaint -->
+        <div>
+            <label>Description</label>
+            <textarea name="description" required></textarea>
+        </div>
+
+        <!-- Full address -->
+        <div>
+            <label>Complete address</label>
+            <textarea name="complete_address" required></textarea>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,72 @@
+/* Overall body styles */
+body {
+    font-family: Arial, sans-serif; /* Clean, simple font */
+    background-color: #4e9cb4; /* Light blue background */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Flex layout to control content alignment */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center everything horizontally */
+}
+
+/* Headings and paragraph styles */
+h1, p, h3 {
+    text-align: center; /* Center align text */
+    color: #fff; /* White text color */
+    margin-top: 20px; /* Space at the top */
+}
+
+/* Form container */
+form {
+    background-color: white; /* White box */
+    margin-top: 20px; /* Space between headings and form */
+    padding: 30px; /* Space inside the box */
+    border-radius: 15px; /* Curved corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 350px; /* Fixed width */
+    box-sizing: border-box; /* Padding included in width */
+}
+
+/* Spacing between each input group */
+div {
+    margin-bottom: 15px;
+}
+
+/* Label style */
+label {
+    display: block; /* Makes label appear above input */
+    margin-bottom: 5px; /* Spacing below label */
+    color: #333; /* Dark text */
+    font-weight: bold; /* Bold labels */
+    padding-left: 5px; /* Slight padding from left */
+}
+
+/* Input and textarea field styles */
+input, textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Inner space */
+    font-size: 15px; /* Readable text */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 6px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Submit button */
+button {
+    display: block; /* Needed to center with margin auto */
+    margin: 20px auto 0; /* Center button horizontally */
+    width: 50%; /* Button width */
+    padding: 10px; /* Button height */
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 6px; /* Rounded button */
+    font-size: 16px; /* Readable text */
+    cursor: pointer; /* Mouse pointer on hover */
+    text-align: center;
+}
+
+/* Change color on hover */
+button:hover {
+    background-color: #0056b3; /* Darker blue */
+}

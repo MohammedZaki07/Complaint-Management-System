@@ -1,0 +1,65 @@
+/* static/admin_dashboard.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4e9cb4;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #007bff;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    float: left;
+    border-right: 1px solid white; 
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.container {
+    padding: 20px;
+}
+
+h2 {
+    color: #000000;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 45px;
+}
+h3 {
+    color: #000000;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 30px;
+}
+.stats-box {
+    text-align: center;
+    font-size:30px ;
+    margin: 8px 0;
+    border: 1px solid #ccc;           /* Border color */
+    width: 400px;                 /* Fixed width */
+    margin: 20px auto ;           /* Centered with auto margins */
+    border-radius: 15px;              /* Curve effect */
+    padding: 20px;                    /* Inner spacing */
+    margin-top: 20px;                 /* Space from top */
+    background-color: #f9f9f9;        /* Light background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    font-family: Arial, sans-serif;   /* Clean font */
+}
+
+
+.datetime p {
+    text-align: center;
+    font-size: 30px;
+    margin: 8px 0;
+}

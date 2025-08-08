@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4e9cb4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1, p {
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Flex container for both forms */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* <-- Changed from flex-start to center */
+    gap: 80px;  /* Space between forms */
+    margin: 20px;
+    flex-wrap: wrap; /* allows stacking on smaller screens */
+    min-height: 80vh; /* ensures vertical centering relative to screen height */
+}
+
+/* Individual form box */
+.form-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.button-link {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.button-link:hover {
+    background-color: #0056b3;
+}

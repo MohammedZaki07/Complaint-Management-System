@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4e9cb4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 40px;
+    margin: 0;
+}
+
+.complaint-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1000px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.search-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-form input {
+    width: 60%;
+    max-width: 400px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.search-form button {
+    padding: 8px 16px;
+    margin-left: 8px;
+    border: none;
+    background: #0056b3;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    border: 2px solid #ccc;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #0056b3;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}

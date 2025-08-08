@@ -1,0 +1,39 @@
+<!-- templates/admin_dashboard.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='admin_dashboard.css') }}">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="{{ url_for('admin_dashboard') }}">Home</a>
+        <a href="{{ url_for('complaint_list') }}">Complaint List</a>
+        <a href="{{ url_for('edit_complaint_list') }}">Edit Complaint List</a>
+        <a href="{{ url_for('admin_logout') }}">Logout</a>
+    </div>
+
+    <div class="container">
+        <strong><h2>Welcome, Admin</h2></strong>
+
+        <div class="stats-box">
+            <strong>
+                <h3>Dashboard Statistics</h3>
+                <p>Total Complaints: {{ total_complaints }}</p>
+                <p>Pending Complaints: {{ pending_complaints }}</p>
+                <p>In Progress Complaints: {{ in_progress_complaints }}</p>
+                <p>Resolved Complaints: {{ resolved_complaints }}</p>
+            </strong>
+        </div><br>
+
+        <div class="datetime">
+            <strong>
+                <p>Date & Time: {{ current_time }}</p>
+            </strong>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>List of Complaints</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='complaint_list.css') }}">
+</head>
+
+<body>
+  <div class="complaint-box">
+    <h2>List of Complaints</h2>
+    <form method="get" action="{{ url_for('complaint_list') }}" class="search-form">
+      <input type="text" name="search" placeholder="Search complaints…" value="{{ search_query }}">
+      <button type="submit">Search</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Complaint</th>
+          <th>Description</th>
+          <th>Complete Address</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% if complaints %}
+        {% for row in complaints %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td>{{ row['name'] }}</td>
+          <td>{{ row['email'] }}</td>
+          <td>{{ row['complaint'] }}</td>
+          <td>{{ row['description'] }}</td>
+          <td>{{ row['complete_address'] }}</td>
+          <td>{{ row['status'] }}</td>
+
+        </tr>
+        {% endfor %}
+        {% else %}
+        <tr>
+          <td colspan="6" style="text-align:center">No complaints found.</td>
+        </tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>

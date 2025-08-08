@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Complain</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    {% if request.args.get('success') == '1' %}
+    <script>
+        alert("Complaint submitted successfully!");
+    </script>
+    {% endif %}
+
+    <h1>Welcome to Complaint Form</h1>
+    <p>We are here to help you with your complaints. Please fill out the form below.</p>
+
+    <div class="form-container">
+        <!-- Left Side: Complaint Form -->
+        <div class="form-box">
+            <h3>Complaint Form</h3>
+            <form action="/complain" method="POST">
+                <div>
+                    <label>Name</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div>
+                    <label>Complaint</label>
+                    <input type="text" name="complain" required>
+                </div>
+                <div>
+                    <label>Description</label>
+                    <textarea name="description" required></textarea>
+                </div>
+                <div>
+                    <label>Complete Address</label>
+                    <textarea name="complete_address" required></textarea>
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                    <a href="{{ url_for('admin_login') }}" class="button-link">Admin Login</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Right Side: Status Check -->
+        <div class="form-box">
+            <h3>Check Your Complaint Status</h3>
+            <form action="{{ url_for('my_complaints') }}" method="get">
+                <div>
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <button type="submit">Check Status</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
