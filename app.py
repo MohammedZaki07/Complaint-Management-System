@@ -32,6 +32,8 @@ def init_db():
 
     conn.close()
 
+init_db()
+
 # ------------------- ROUTES -------------------
 
 @app.route('/')
@@ -196,5 +198,4 @@ def admin_logout():
     return redirect(url_for('admin_login'))
 
 if __name__ == '__main__':
-    init_db()
     app.run(debug=True)
