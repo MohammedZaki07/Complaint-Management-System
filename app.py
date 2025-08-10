@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 import sqlite3
 from datetime import datetime
+import pytz  # ✅ Added for timezone support (IST)
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -47,7 +48,10 @@ def submit_complaint():
     complaint = request.form['complain']
     description = request.form['description']
     complete_address = request.form['complete_address']
-    date = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+
+    # ✅ Changed: Use Indian Standard Time instead of UTC
+    india = pytz.timezone('Asia/Kolkata')
+    date = datetime.now(india).strftime("%d-%m-%Y %H:%M:%S")
 
     conn = sqlite3.connect('complaints.db')
     cursor = conn.cursor()
@@ -105,7 +109,9 @@ def admin_dashboard():
     resolved = cursor.fetchone()[0]
     conn.close()
 
-    current_time = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+    # ✅ Changed: Show current IST time in dashboard
+    india = pytz.timezone('Asia/Kolkata')
+    current_time = datetime.now(india).strftime("%d-%m-%Y %H:%M:%S")
 
     return render_template(
         'admin_dashboard.html',
